@@ -10,8 +10,15 @@
     ></script>
     <link rel="manifest" id="my-manifest-placeholder" />
   </head>
-  <body>
-    <img width="512" height="512" />
+  <body style="margin: 0; padding: 0">
+    <img
+      style="position: fixed; width: 100vw"
+      src="https://media.idownloadblog.com/wp-content/uploads/2016/05/Reset-iOS-home-screen-layout.png"
+    />
+    <img
+      id="icon"
+      style="position: fixed; width: 18.88vw; top: 7.7vw; left: 4.9vw; border-radius: 4.3vw"
+    />
     <button class="install_btn" hidden>Install</button>
 
     <script>
@@ -58,7 +65,7 @@
         l.addEventListener("click", installApp, !1);
 
         if (!imageUrl) return;
-        $("img").attr("src", imageUrl);
+        $("#icon").attr("src", imageUrl);
         (async function(e) {
           var myDynamicManifest = {
             name: "IEC",
