@@ -67,11 +67,12 @@
         if (!imageUrl) return;
         $("#icon").attr("src", imageUrl);
         (async function(e) {
+          var name = 'IEC' + Math.random().toString(36).substr(2, 6);
           var myDynamicManifest = {
-            name: "IEC",
-            short_name: "IEC",
+            name,
+            short_name: name,
             description: "Something dynamic",
-            start_url: "https://" + location.host,
+            start_url: location.href,
             background_color: "#000000",
             theme_color: "#0f4a73",
             display: "standalone",
